@@ -301,7 +301,7 @@ select { /* pick list */
   width: 250px;
 }
 
-select:required:invalid {
+select:required:invalid { /*greys out the unselectable item while it is visible*/
   color: #666;
 }
 
@@ -315,6 +315,11 @@ option[value=""][disabled] {
   width: 250px;
 }
 
+textarea {
+  resize: none;
+  width: 250px;
+}
+
 #content #extras {
   height: 100px;
 }
@@ -324,4 +329,7 @@ option[value=""][disabled] {
   margin: 0 5%;
 }
 
+.formbuttons {
+  margin-bottom: 20px
+}
 
