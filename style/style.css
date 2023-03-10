@@ -298,10 +298,30 @@ label {
 
 select { /* pick list */ 
   display: inline-block;
-  width: 200px;
+  width: 250px;
+}
+
+select:required:invalid {
+  color: #666;
+}
+
+option[value=""][disabled] {
+  display:none;
 }
 
 #content input {
   display: inline-block;
-  width: 200px;
+  box-sizing:border-box; /*helps with alignment with input=select elements*/
+  width: 250px;
 }
+
+#content #extras {
+  height: 100px;
+}
+
+#addbooking, #clearform{
+  width:100px !important;
+  margin: 0 5%;
+}
+
+

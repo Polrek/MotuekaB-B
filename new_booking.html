@@ -62,6 +62,7 @@
           <p>
             <label for="Room">Choose a room</label>
               <select name="Rooms" id="Rooms"> 
+                  <option value="" disabled selected>Choose a room</option>
                   <option value="kellie">Kellie S 5</option>
                   <option value="herman">Herman D 5</option>
                   <option value="scarlett">Scarlett D 2</option>
@@ -79,22 +80,25 @@
               </select>
               </p>
               <p>
-           <label for="firstname">Name: </label> 
-           <input type="text" id="firstname" name="firstname" minlength="2" maxlength="50" required>
+           <label for="checkin">Check In Date: </label> 
+           <input type="date" id="checkin" name="checkin" min="2023-03-11" max="2025-03-11" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
           </p>
           <p> 
-           <label for="lastname">Last Name: </label> 
-           <input type="text" id="lastname" name="lastname" minlength="2" maxlength="50" required>
-          </p>
-          <p>
-           <label for="email">Email: </label> 
-           <input type="email" id="email" name="email" minlength="5" maxlength="50" required>
-          </p>
-          <p>
-           <label for="password">Password: </label>
-           <input type="password" id="password" name="password" minlength="8" maxlength="32" required>
+            <label for="checkout">Check Out Date: </label> 
+            <input type="date" id="checkout" name="checkout" min="2023-03-11" max="2025-03-11" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
            </p>
-           <input type="submit" name="submit" value="Register"> 
+          <p>
+           <label for="contactnum">Contact Number: </label> 
+           <input type="tel" id="contactnum" name="contactnum" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4,5}" required> <small>Format: 021-000-0000 or 06-123-4567</small> <!--validate using regex/php in next assigment?-->
+          </p>
+          <p>
+           <label for="extras">Booking Extras </label>
+           <input type="text" id="extras" name="extras" maxlength="1024"> <!-- should match the database constraint on the field it gets popped into and SANITISE INPUTS SO NO ONE PUTS CODE INTO THESE FIELDS-->
+           </p>
+           <div class="formbuttons">
+           <input type="submit" id="clearform" name="clearform" value="Clear Form"> 
+           <input type="submit" id="addbooking" name="addbooking" value="Add">
+           </div> 
           </form> 
         </div>
     </div>
