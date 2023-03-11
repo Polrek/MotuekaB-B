@@ -23,12 +23,12 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.html">Home</a></li>
-          <li><a href="current_bookings.html">Current Bookings</a></li>
-          <li><a href="booking_details.html">Booking Details</a></li>
           <li><a href="new_booking.html">New Booking</a></li>
-          <li class="selected"><a href="edit_booking.html">Edit Booking</a></li>
-          <li><a href="delete_booking.html">Delete Booking</a></li>
+          <li><a href="current_bookings.html">Current Bookings</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
+          <!-- <li><a href="booking_details.html">Booking Details</a></li> -->
+          <!-- <li class="selected"><a href="edit_booking.html">Edit Booking</a></li> -->
+          <!-- <li><a href="delete_booking.html">Delete Booking</a></li> -->
         </ul>
       </div>
     </div>
@@ -57,30 +57,60 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Privacy Policy</h1>
-        <p>We collect personal information from you, including information about your:</p>
-          <ul>
-            <li>name</li>
-            <li>contact information</li>
-            <li>computer or network</li>
-            <li>interactions with us</li>
-            <li>billing or purchase information</li>        
-          </ul>
-          <p>We collect your personal information in order to:</p>
-          <ul>
-            <li>perform actions that directly relate to your booking</li>
-            <li>manage your booking</li>
-            <li>collect analytics on the use of our website</li>
-          </ul>
-          <p>Besides our staff, we share this information with:</p>
-          <ul>
-            <li>our third-party payment gateway, Windcave, in order to process your credit card payment</li>    
-          </ul>
-          <p>Providing some information is optional. If you choose not to enter payment information and contact details, we'll be unable to secure your room booking.</p>
-          <p>We keep your information safe by storing it in encrypted files and only allowing certain staff to access it.</p>
-          <p>We keep your information for seven years at which point we securely destroy it by securely erasing any digital copies, and shredding any paper copies.</p>
-          <p>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. 
-            If you'd like to ask for a copy of your information, or to have it corrected, please contact us at <a href=mailto:privacy@motuekabnb.co.nz>privacy@motuekabnb.co.nz</a>, or <a href=tel:0800668835>0800 668 835</a>, or 10 Fearon Street, Motueka.</p>
+        <h1>Edit Booking</h1>
+        <h2>Edit Booking for Test</h2>
+        <form method="POST" action=""> 
+          <p>
+            <label for="Room">Choose a room</label>
+              <select name="Rooms" id="Rooms"> 
+                  <!-- <option value="" disabled selected>Choose a room</option> -->
+                  <option value="kellie">Kellie, S, 5</option>
+                  <option value="herman" selected>Herman, D, 5</option>
+                  <option value="scarlett">Scarlett, D, 2</option>
+                  <option value="jelani">Jelani, S, 2</option>
+                  <option value="sonya">Sonya, S, 5</option>
+                  <option value="miranda">Miranda, S, 4</option>
+                  <option value="helen">Helen, S, 2</option>
+                  <option value="octavia">Octavia, D, 3</option>
+                  <option value="gretchen">Gretchen, S, 5</option>
+                  <option value="bernard">Bernard, S, 5</option>
+                  <option value="dacey">Dacey, D, 2</option>
+                  <option value="preston">Preston, D, 2</option>
+                  <option value="dane">Dane, S, 4</option>
+                  <option value="cole">Cole, S, 1</option>
+              </select>
+              </p>
+              <p>
+           <label for="checkin">Check In Date:</label> 
+           <input type="date" id="checkin" name="checkin" min="2023-03-11" max="2025-03-11" value="2022-10-10" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
+           <!-- <input type="date" value="<?php echo date("Y-m-d"); ?>"> for next assignment? -->
+          </p>
+          <p> 
+            <label for="checkout">Check Out Date:</label> 
+            <input type="date" id="checkout" name="checkout" min="2023-03-11" max="2025-03-11" value="2022-12-10" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
+           </p>
+          <p>
+           <label for="contactnum">Contact Number:</label> 
+           <input type="tel" id="contactnum" name="contactnum" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4,5}" value="021 555 5555" required> <small>Format: 021-000-0000 or 06-123-4567</small> <!--validate using regex/php in next assigment?-->
+          </p>
+          <p>
+            <div class="textarea">
+              <label for="extras">Booking Extras:</label>
+              <textarea id="extras" name="extras" maxlength="1024">none</textarea> <!-- should match the database constraint on the field it gets popped into and SANITISE INPUTS SO NO ONE PUTS CODE INTO THESE FIELDS-->
+            </div>
+          </p>
+          <p>
+            <div class="textarea">
+              <label for="roomreview">Room Review:</label>
+              <textarea id="roomreview" name="roomreview" maxlength="1024">none</textarea> <!-- should match the database constraint on the field it gets popped into and SANITISE INPUTS SO NO ONE PUTS CODE INTO THESE FIELDS-->
+            </div>
+          </p>
+           <div class="formbuttons">
+           <a href="current_bookings.html">[Cancel]</a>
+           <input type="submit" id="update" name="update" value="Update">
+           </div> 
+          </form>
+
         </div>
     </div>
     <div id="footer">

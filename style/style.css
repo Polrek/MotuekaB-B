@@ -320,7 +320,7 @@ textarea {
   width: 250px;
 }
 
-#content #extras {
+#content textarea {
   height: 100px;
 }
 

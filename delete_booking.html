@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Motueka B&B | Privacy Policy</title>
+  <title>Motueka B&B | Delete Booking</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -23,12 +23,12 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.html">Home</a></li>
-          <li><a href="current_bookings.html">Current Bookings</a></li>
-          <li><a href="booking_details.html">Booking Details</a></li>
           <li><a href="new_booking.html">New Booking</a></li>
-          <li><a href="edit_booking.html">Edit Booking</a></li>
-          <li class="selected"><a href="delete_booking.html">Delete Booking</a></li>
+          <li><a href="current_bookings.html">Current Bookings</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
+          <!-- <li><a href="booking_details.html">Booking Details</a></li> -->
+          <!-- <li><a href="edit_booking.html">Edit Booking</a></li> -->
+          <!-- <li class="selected"><a href="delete_booking.html">Delete Booking</a></li> -->
         </ul>
       </div>
     </div>
@@ -57,31 +57,28 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Privacy Policy</h1>
-        <p>We collect personal information from you, including information about your:</p>
-          <ul>
-            <li>name</li>
-            <li>contact information</li>
-            <li>computer or network</li>
-            <li>interactions with us</li>
-            <li>billing or purchase information</li>        
-          </ul>
-          <p>We collect your personal information in order to:</p>
-          <ul>
-            <li>perform actions that directly relate to your booking</li>
-            <li>manage your booking</li>
-            <li>collect analytics on the use of our website</li>
-          </ul>
-          <p>Besides our staff, we share this information with:</p>
-          <ul>
-            <li>our third-party payment gateway, Windcave, in order to process your credit card payment</li>    
-          </ul>
-          <p>Providing some information is optional. If you choose not to enter payment information and contact details, we'll be unable to secure your room booking.</p>
-          <p>We keep your information safe by storing it in encrypted files and only allowing certain staff to access it.</p>
-          <p>We keep your information for seven years at which point we securely destroy it by securely erasing any digital copies, and shredding any paper copies.</p>
-          <p>You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. 
-            If you'd like to ask for a copy of your information, or to have it corrected, please contact us at <a href=mailto:privacy@motuekabnb.co.nz>privacy@motuekabnb.co.nz</a>, or <a href=tel:0800668835>0800 668 835</a>, or 10 Fearon Street, Motueka.</p>
-        </div>
+        <h1>Booking Preview before Deletion</h1>
+        <fieldset>
+          <legend>Room detail #2</legend>
+          <p>Room Name:</p>
+          <p>Herman</p> <!--would be echo $var in php-->
+          <p>Check In Date:</p>
+          <p>2022-10-10</p> <!--would be echo $var in php-->
+          <p>Check Out Date:</p>
+          <p>2022-12-10</p> <!--would be echo $var in php-->
+          <p>Contact Number:</p>
+          <p>021-555-5555</p> <!--would be echo $var in php-->
+          <p>Extras:</p>
+          <p>none</p> <!--would be ISNULL(extras,"") type of thing from the db-->
+          <p>Room Review</p>
+          <p>great</p> <!--would be ISNULL(roomreview,"") type of thing from the db-->
+        </fieldset>
+        <h2>Are you sure you want to delete this booking?</h2>
+        <div class="formbuttons">
+          <a href="current_bookings.html">[Cancel]</a>
+          <input type="submit" id="delete" name="delete" value="Delete">
+          </div> 
+      </div>
     </div>
     <div id="footer">
       Copyright &copy; Motueka B&B | <a href="http://www.html5webtemplates.co.uk">Free CSS Templates</a>

@@ -23,12 +23,12 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="current_bookings.html">Current Bookings</a></li>
-          <li><a href="booking_details.html">Booking Details</a></li>
           <li><a href="new_booking.html">New Booking</a></li>
-          <li><a href="edit_booking.html">Edit Booking</a></li>
-          <li><a href="delete_booking.html">Delete Booking</a></li>
+          <li class="selected"><a href="current_bookings.html">Current Bookings</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
+          <!-- <li><a href="booking_details.html">Booking Details</a></li> -->
+          <!-- <li><a href="edit_booking.html">Edit Booking</a></li> -->
+          <!-- <li><a href="delete_booking.html">Delete Booking</a></li> -->
         </ul>
       </div>
     </div>
@@ -68,19 +68,21 @@
             <td>Herman, 2022-10-10, 2022-12-10</td>
             <td>Baldwin, Forrest</td>
             <td>
-              <input type="submit" id="view" name="view" value="View Booking">
-              <input type="submit" id="edit" name="edit" value="Edit Booking">
-              <input type="submit" id="managereviews" name="Manage Reviews" value="Manage Reviews">
-              <input type="submit" id="delete" name="delete" value="Delete Booking">
-              </td>
+              <a href="booking_details.html">[view]</a>
+              <a href="edit_booking.html">[edit]</a>
+              <a href="#">[manage reviews]</a>
+              <a href="delete_booking.html">[delete]</a>
+            </td>  
           </tr>
           <tr>
             <td>Sonya, 2022-07-01, 2022-07-20</td>
             <td>Walker, Irene</td>
-            <td><input type="submit" id="view" name="view" value="View Booking">
-              <input type="submit" id="edit" name="edit" value="Edit Booking">
-              <input type="submit" id="managereviews" name="Manage Reviews" value="Manage Reviews">
-              <input type="submit" id="delete" name="delete" value="Delete Booking"></td>
+            <td>
+              <a href="booking_details.html">[view]</a>
+              <a href="#">[edit]</a>
+              <a href="#">[manage reviews]</a>
+              <a href="#">[delete]</a>
+            </td>  
           </tr>
         </table>
         </div>
