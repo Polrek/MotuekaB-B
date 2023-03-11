@@ -333,3 +333,20 @@ textarea {
   margin-bottom: 20px
 }
 
+fieldset legend {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+fieldset p {
+  padding: 0 0 0 5px;
+  
+}
+
+fieldset p:nth-of-type(odd) {
+  font-weight: bold;
+}
+
+fieldset p:nth-of-type(even) {
+  margin-left: 35px;
+}
