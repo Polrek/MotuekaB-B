@@ -324,11 +324,13 @@ textarea {
   height: 100px;
 }
 
+/*
 #addbooking, #clearform, #view, #edit, #managereviews, #delete{
   width:120px !important;
   margin: 0 5%;
   padding: 0 5px 0 5px;
 }
+*/
 
 .formbuttons {
   margin-bottom: 20px

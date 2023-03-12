@@ -24,7 +24,7 @@
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.html">Home</a></li>
           <li><a href="new_booking.html">New Booking</a></li>
-          <li><a href="current_bookings.html">Current Bookings</a></li>
+          <li class="selected"><a href="current_bookings.html">Current Bookings</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <!-- <li><a href="booking_details.html">Booking Details</a></li> -->
           <!-- <li><a href="edit_booking.html">Edit Booking</a></li> -->
@@ -75,7 +75,7 @@
         </fieldset>
         <h2>Are you sure you want to delete this booking?</h2>
         <div class="formbuttons">
-          <a href="current_bookings.html">[Cancel]</a>
+          <input type="button" id="cancel" name="cancel" value="Cancel" onclick="window.location.href='/current_bookings.html';">
           <input type="submit" id="delete" name="delete" value="Delete">
           </div> 
       </div>

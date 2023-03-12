@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Motueka B&B | Privacy Policy</title>
+  <title>Motueka B&B | Edit Booking</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -24,7 +24,7 @@
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.html">Home</a></li>
           <li><a href="new_booking.html">New Booking</a></li>
-          <li><a href="current_bookings.html">Current Bookings</a></li>
+          <li class="selected"><a href="current_bookings.html">Current Bookings</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <!-- <li><a href="booking_details.html">Booking Details</a></li> -->
           <!-- <li class="selected"><a href="edit_booking.html">Edit Booking</a></li> -->
@@ -59,7 +59,7 @@
         <!-- insert the page content here -->
         <h1>Edit Booking</h1>
         <h2>Edit Booking for Test</h2>
-        <form method="POST" action=""> 
+        <!-- <form method="POST" action="">  -->
           <p>
             <label for="Room">Choose a room</label>
               <select name="Rooms" id="Rooms"> 
@@ -82,7 +82,7 @@
               </p>
               <p>
            <label for="checkin">Check In Date:</label> 
-           <input type="date" id="checkin" name="checkin" min="2023-03-11" max="2025-03-11" value="2022-10-10" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
+           <input type="date" id="checkin" name="checkin" min="2023-03-01" max="2025-03-01" value="2022-10-10" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
            <!-- <input type="date" value="<?php echo date("Y-m-d"); ?>"> for next assignment? -->
           </p>
           <p> 
@@ -106,7 +106,7 @@
             </div>
           </p>
            <div class="formbuttons">
-           <a href="current_bookings.html">[Cancel]</a>
+            <input type="button" id="cancel" name="cancel" value="Cancel" onclick="window.location.href='/current_bookings.html';">
            <input type="submit" id="update" name="update" value="Update">
            </div> 
           </form>
