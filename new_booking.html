@@ -59,6 +59,7 @@
         <!-- insert the page content here -->
         <h1>Create a new booking</h1>
         <!-- <form method="POST" action="">  -->
+          <form>
           <p>
             <label for="Room">Choose a room</label>
               <select name="Rooms" id="Rooms"> 
@@ -101,11 +102,12 @@
            <input type="reset" id="clearform" name="clearform" value="Clear Form" onclick="document.value=''"> 
            <input type="submit" id="addbooking" name="addbooking" value="Add">
            </div> 
-          <!-- </form> -->
+           </form>
           <hr>
           <div id="content">
             <h1>Search for room availability</h1>
             <!-- <form method="POST" action="">  -->
+              <form>
               <p>
                 <label for="avail_start">Start Date: </label> 
                 <input type="date" id="avail_start" name="avail_start" min="2023-03-11" max="2025-03-11" required> <!-- could get the min date by using php to get the current date (can't book for yesterday) and max date for current date plus 1 year-->
@@ -114,10 +116,11 @@
                  <label for="avail_end">End Date:</label> 
                  <input type="date" id="checkout" name="checkout" min="2023-03-11" max="2025-03-11" required>
               </p>
-            <!-- </form> -->
+            
             <div class="formbuttons">
               <input type="submit" id="searchavailability" name="searchavailability" value="Search Availability">
               </div> 
+            </form>
             </div>
             <table>
               <tr>
